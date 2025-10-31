@@ -27,30 +27,35 @@ type MenuItem = {
 const items = ref<MenuItem[]>([
   {
     label: 'Home',
-    icon: Home03Icon, // استخدام الأيقونة كمكون
+    // icon: Home03Icon, // استخدام الأيقونة كمكون
     route: '/',
   },
   {
     label: 'About',
-    icon: AlphabetBanglaIcon,
+    // icon: AlphabetBanglaIcon,
     route: '/about',
   },
   {
     label: 'Posts',
-    icon: PencilIcon,
+    // icon: PencilIcon,
     route: '/posts',
   },
   {
     label: 'Albums',
-    icon: ServerStack01Icon,
+    // icon: ServerStack01Icon,
     route: '/albums',
   },
   {
     label: 'Members',
-    icon: StarsIcon,
+    // icon: StarsIcon,
     route: '/members',
   }
 ]);
+
+// function extractIcon(iconComp) {
+//   // أحياناً المكون يخزن بياناته داخل خاصية .icon أو داخل .default.icon حسب البنية
+//   return iconComp.icon || iconComp.default?.icon || iconComp;
+// }
 </script>
 
 <template>
@@ -71,7 +76,12 @@ const items = ref<MenuItem[]>([
               :class="{ 'active-menu-item': isExactActive }"
           >
             <!-- عرض الأيقونة كمكون -->
-            <component v-if="item.icon" :is="item.icon" class="menu-icon" />
+<!--            <HugeiconsIcon-->
+<!--                v-if="item.icon"-->
+<!--                :icon="extractIcon(item.icon)"-->
+<!--                class="menu-icon"-->
+<!--                size="24"-->
+<!--            />-->
             <span>{{ item.label }}</span>
           </a>
         </router-link>
