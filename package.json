@@ -10,7 +10,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://Ahmeed1123.github.io//vueProject",
+  "homepage": "https://ahmeed1123.github.io/vueProject",
   "dependencies": {
     "@formkit/auto-animate": "^0.9.0",
     "@hugeicons/core-free-icons": "^1.2.0",
